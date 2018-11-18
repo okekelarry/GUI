@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Interactive Dynamic Multiplication Table</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/example.css">
+  </head>
+  <div class = "content">
+  <body>
+    <h1> Interactive Dynamic Multiplication Table </h1>
+  <form name="t1" onsubmit="validateAllInputBoxes(event);">
+  <div class = "form-group">
+  <label>S_Row: <input type="text" name="rows" id="rows"  required/></label><br />
+  <label>E_Row: <input type="text" name="cols" id="cols"/></label><br/>
+  <label>S_Col: <input type="text" name="x" id="x"/></label><br />
+  <label>E_Col: <input type="text" name="y" id="y"/></label><br />
+  <input name="generate" type="button" value="Submit" onClick='createTable()'/>
+  <input type ="reset" value ="Reset"/>
+  <p id ="demo"></p>
+  </form>
+</div>
+  <table class = "table table-striped">
+
+  </table>
+</div>
+  <div id="wrapper"></div>
+    <script src="js/example.js"></script>
+  </body>
+</html>
