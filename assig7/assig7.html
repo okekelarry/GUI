@@ -1,0 +1,118 @@
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <!-- Custom Title Bar -->
+  <title>Interactive Dynamic Multiplication Table</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+  <!-- CSS file to override stuff -->
+    <link rel="stylesheet" href="css/index.css">
+  </head>
+<body>
+  <!--  Navbar div. See html/navbar.html for that code. It gets loaded into this
+        div by the JS at the bottom of this page. -->
+  <div id="NavBarHeader"></div>
+
+  <!-- The main container
+       Making the container fluid to use up all the screen real estate -->
+  <div class="container-fluid">
+
+    <!-- First row - Assignment description -->
+    <div class="row">
+      <div class="col-md-12">
+      </div>
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <div class="highlight_centered">All input fields MUST range from -12 to 12 to generate interactive dynamic multiplication table.</div>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+
+    <br>
+
+    <!-- Title / form goes here -->
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-4">
+        <!-- Form to take user input.-->
+        <div class="highlight_centered_margins">
+          <form id="mult_form" name="mult_form" method="GET">
+            <div>
+              <label>Starting horizontal number: </label>
+              <input type="number" id="horiz_start" name="horiz_start" value="" required>
+            </div>
+
+            <div>
+              <label>Ending horizontal number: </label>
+              <input type="number" id="horiz_end" name="horiz_end" value="" required>
+            </div>
+
+            <div>
+              <label>Starting vertical number: </label>
+              <input type="number" id="vert_start" name="vert_start" value="" required>
+            </div>
+
+            <div>
+              <label>Ending vertical number: </label>
+              <input type="number" id="vert_end" name="vert_end" value="" required>
+            </div>
+
+            <!-- Note: using onclick so that when debugging the form, user input isn't lost
+                 and console.logs are also kept. Using onsubmit made it very difficult to
+                 spot errors, while onclick doesn't force the page to refresh because
+                 of the return false in the onsubmit form attribute. -->
+            <input id="button_submit" class="submit_button" type="submit" value="Generate Table">
+            <input type ="reset" value ="Reset"/>
+          </form>
+
+          <!-- Error messages will appear here instead of in a popup. -->
+          <div id="warning_msg"></div>
+
+        </div>
+      </div>
+
+      <div class="col-md-7">
+        <!-- The multiplication table will appear in this div -->
+        <div id="multiplication_table"></div>
+      </div>
+
+    </div>
+
+    <br><br><br>               <!-- Adding line breaks to make the display nicer. -->
+
+    <!--  This div will have the footer (html/footer.html) loaded into it
+          by the JS at the bottom of the page. -->
+    <div id="TheFooter"></div>
+
+  </div>          <!-- This should be the end div of the main container. -->
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins). -->
+    <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script type='text/javascript' src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <!-- jQuery Validation plugin -->
+    <script type='text/javascript' src="https://cdn.jsdelivr.net/jquery.validation/1.14.0/jquery.validate.js"></script>
+    <script type='text/javascript' src="https://cdn.jsdelivr.net/jquery.validation/1.14.0/additional-methods.js"></script>
+
+    <!-- JS file that handles the multiplication table and validate code -->
+    <script type='text/javascript' src="js/table_v2.js"></script>
+
+    <!-- Load the header/footer when the page is ready. Also load the validate() function -->
+    <script>
+      $( document ).ready(function() {
+          $("#NavBarHeader").load("html/navbar.html");
+          $("#TheFooter").load("html/footer.html");
+
+ // on body ready, validate function runs.
+          validate();
+      });
+    </script>
+
+  </body>
+  </html>
