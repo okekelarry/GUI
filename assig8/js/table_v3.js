@@ -6,19 +6,7 @@ var tabIndex = 1;
     - on page load (automagically generated a 0 by 0 table by default)
     - on keyup (if the user types "5" it generates a new table using this input)
     - on slide (slider moves, new table is generated)
-
-    I found an example of submitting the form using jQuery on Stackoverflow,
-    URL here: https://stackoverflow.com/questions/1200266/submit-a-form-using-jquery
-
-    The if statement I created after Googling to see if there is a way to detect
-    valid forms with the jQuery Validator. Turns out .valid() returns true or false.
-
-    Also, by using this code I can now validate code on the first run through
-    without having the user click the submit button. This was pointed out by
-    one of the graders as a problem, and now even on the first page load the
-    validator will be run if the user tries to type "100". They don't even need
-    to click enter either, as I run this code onkeyup as well in the validator.
-*/
+  */
 function auto_submit() {
   // If the form is valid
   if( $("form#mult_form").valid() == true ) {
@@ -281,23 +269,9 @@ function table_calc() {
   var vert_start = Number(document.getElementById('vert_start').value);
   var vert_end = Number(document.getElementById('vert_end').value);
 
-  // DEBUG
-  // Check to see if the numbers are read correctly.
-  // console.log("Horizontal start: ", hor_start, "Horizontal end: ", hor_end),
-  // console.log("Vertical start: ", vert_start, "Vertical end: ", vert_end);
-
   /*
         This section handles some "warning messages" that I decided would be worth
         adding after Prof. Heines mentioned some thoughts the graders had.
-
-        I basically warn the user if I decide to flip the inputs on them,
-        e.g. user enters [5, 1] I flip this to [1, 5] so it's easier to deal with
-        (1 case vs 2 cases basically).
-
-        This doesn't actually validate the form or anything - if this function is run,
-        it is run by the submit button assuming the validation rules aren't broken,
-        so at this point everything is assumed to be valid. (see the submitHandler function
-        in the validate() function)
   */
 
   // Empty the div first.
