@@ -2,8 +2,6 @@ function validate() {
 
   /*  Switch to using the jQuery Validation Plugin
       See this demo: jqueryvalidation.org/files/demo/
-      And Prof. Heines' website: https://teaching.cs.uml.edu/~heines/91.461/91.461-2015-16f/461-lecs/lecture18.jsp
-      Also the documentation on this site was pretty helpful: http://jqueryvalidation.org/validate/
   */
   $("#mult_form").validate({
     // Rules for validating the form.
