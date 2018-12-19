@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Scrabble Game</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="icon" href="images/icon.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="script/script.js"></script>
+    <script src="script/pieces.json"></script>
+    <script src="script/function.js"></script>
+
+
+</head>
+
+<body>
+  <h1 class="name" style="text-align: center;">
+         <span class="highlight_fun">Implementing a Bit of Scrabble with Drag-and-Drop</span>
+       </h1>
+    <div id="scrabble">
+        <div id="table"></div>
+        <div id="playerBoard">
+            <div class="scoreBoard">
+                <p>SCORE: <span id="score">0</span></p>
+                <p>TOTAL LETTERS: <span id="availableLetter">100</span></p>
+
+            </div>
+
+            <div id="player">
+                <div id="rack">
+                    <!-- player one-->
+                    <!-- <div id="stand"> -->
+                    <table class="standTable">
+                        <tr>
+                            <td id="a" class="snapRack letterStand"></td>
+                            <td id="b" class="snapRack letterStand"></td>
+                            <td id="c" class="snapRack letterStand"></td>
+                            <td id="d" class="snapRack letterStand"></td>
+                            <td id="e" class="snapRack letterStand"></td>
+                            <td id="f" class="snapRack letterStand"></td>
+                            <td id="g" class="snapRack letterStand"></td>
+                        </tr>
+                    </table>
+                    <!-- </div> -->
+                </div>
+
+                <button id="swap" class="button" disabled>Switch</button>
+                <button id="play" class="button">Play</button>
+            </div>
+
+        </div>
+          <table id="letters_remain">
+            <tr>
+              <td class="larger_td" colspan="9">LETTERS REMAINING</td>
+            </tr>
+            <tr>
+              <td class="larger_td">A: 9</td>
+              <td class="larger_td">B: 2</td>
+              <td class="larger_td">C: 2</td>
+              <td class="larger_td">D: 4</td>
+              <td class="larger_td">E: 12</td>
+              <td class="larger_td">F: 2</td>
+              <td class="larger_td">G: 3</td>
+              <td class="larger_td">H: 2</td>
+              <td class="larger_td">I: 9</td>
+            </tr>
+            <tr>
+              <td class="larger_td">J: 1</td>
+              <td class="larger_td">K: 1</td>
+              <td class="larger_td">L: 4</td>
+              <td class="larger_td">M: 2</td>
+              <td class="larger_td">N: 6</td>
+              <td class="larger_td">O: 8</td>
+              <td class="larger_td">P: 2</td>
+              <td class="larger_td">Q: 1</td>
+              <td class="larger_td">R: 6</td>
+            </tr>
+            <tr>
+              <td class="larger_td">S: 2</td>
+              <td class="larger_td">T: 6</td>
+              <td class="larger_td">U: 8</td>
+              <td class="larger_td">V: 2</td>
+              <td class="larger_td">W: 2</td>
+              <td class="larger_td">X: 1</td>
+              <td class="larger_td">Y: 2</td>
+              <td class="larger_td">Z: 1</td>
+              <td class="larger_td">_: 2</td>
+            </tr>
+          </table>
+      </div>
+    </div>
+    </div>
+</body>
+
+</html>
