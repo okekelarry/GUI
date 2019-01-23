@@ -113,6 +113,10 @@ div form input.submit_button {
   cursor: pointer;
 }
 
+.submit_button {
+   float:left;
+   margin-right:5px;
+}
 
 div#multiplication_table {
   /* Currently not used */
