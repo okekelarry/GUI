@@ -21,8 +21,6 @@
   <!-- The main container
        Making the container fluid to use up all the screen real estate -->
   <div class="container-fluid">
-
-    <!-- First row - Assignment description -->
     <div class="row">
       <div class="col-md-12">
       </div>
@@ -32,10 +30,8 @@
       </div>
       <div class="col-md-3"></div>
     </div>
-
     <br>
-
-    <!-- Title / form goes here -->
+    <!-- Title -->
     <div class="row">
       <div class="col-md-1"></div>
       <div class="col-md-4">
@@ -67,7 +63,7 @@
                  spot errors, while onclick doesn't force the page to refresh because
                  of the return false in the onsubmit form attribute. -->
             <input id="button_submit" class="submit_button" type="submit" value="Generate Table">
-            <input type ="reset" class="submit_button" value ="Reset"/>
+            <input type ="reset" value ="Reset"/>
           </form>
 
           <!-- Error messages will appear here instead of in a popup. -->
@@ -83,14 +79,12 @@
 
     </div>
 
-    <br><br><br>               <!-- Adding line breaks to make the display nicer. -->
-
+    <br><br><br>               
     <!--  This div will have the footer (html/footer.html) loaded into it
           by the JS at the bottom of the page. -->
     <div id="TheFooter"></div>
 
-  </div>          <!-- This should be the end div of the main container. -->
-
+  </div>          
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins). -->
     <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
