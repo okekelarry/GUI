@@ -282,7 +282,7 @@ function table_calc() {
   if (hor_start > hor_end) {
 
     // Alert the user that this is happening!
-    $("#warning_msg").append("<p class='warning_class'>Swapping the Horizontal start and Horizontal end.</p>");
+    $("#warning_msg").append("<p class='warning_class'> </p>");
 
     var tmp_num = hor_start;
     hor_start = hor_end;
@@ -293,7 +293,7 @@ function table_calc() {
   if (vert_start > vert_end) {
 
     // Alert the user that this is happening!
-    $("#warning_msg").append("<p class='warning_class'>Swapping the Vertical start and Vertical end.</p>");
+    $("#warning_msg").append("<p class='warning_class'> </p>");
 
     var tmp_num = vert_start;
     vert_start = vert_end;
