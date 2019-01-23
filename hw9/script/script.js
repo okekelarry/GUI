@@ -18,11 +18,6 @@ var playedLetter = []; //save the rack tile index to remove its child when swapp
 
 $(document).ready(function () {
 
-
-
-
-
-
     generateTable();
 
     function generateTable() {
@@ -45,8 +40,6 @@ $(document).ready(function () {
         $("#table").append(table);
 
     }
-
-
 
 
     function getLetter(i) { //input ASCII code , return Character
@@ -108,24 +101,6 @@ $(document).ready(function () {
 
 
     function reRackLetter() { //put the "7" letters in the array on the rack
-        // $(".standTable").remove();
-        // let table = $("<table>").addClass("standTable");
-        // let tbody = $("<tbody>");
-        // let tr = $("<tr>");
-        // for (i = 0; i < 7; i++) {
-        //     let td = $("<td>");
-        //     td.addClass("snap letterStand").text("");
-        //     td.attr("id", getLetter(i));
-        //     tr.append(td); //add td to tr
-        // }
-        // tbody.append(tr); //append tr to tbody
-
-        // table.append(tbody); //add tbody to table
-        // $("#rack").append(table);
-
-        // let table = "<table id='standTable'> <tr><td class='snap' id='" + getLetter(1) + "'" + "></td></tr></table>";
-
-        // console.log("this is table" + table);
         let exist = false;
         for (let i = 0; i < tileID.length; i++) { //remvoe the tiles that is not played before get new tiles
             let id = tileID[i];
