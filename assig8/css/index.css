@@ -280,10 +280,3 @@ h1.name {
 .highlight {
   background-color: black;
 }
-
-/* Assignment 5 title */
-.highlight_red {
-  background-color: black;
-  color: red;
-  font-family: "Righteous";
-}
