@@ -114,7 +114,7 @@ div form input.submit_button {
 }
 
 .submit_button {
-   float:right;
+   float:left;
    margin-right:5px;
 }
 
