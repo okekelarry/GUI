@@ -8,7 +8,6 @@ body{
     background-size: 100%;
 }
 
-
 td{
     border: 1px solid green;
     width:  38px;
@@ -17,7 +16,6 @@ td{
 tr{
 
     height: 38px;
-
 }
 #scrabble{
     position: relative;
